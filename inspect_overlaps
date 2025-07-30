@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -N inspect_overlaps
+#PBS -l walltime=00:10:00
+#PBS -l mem=4gb
+#PBS -l nodes=1:ppn=1
+#PBS -o overlap.out
+#PBS -e overlap.err
+#PBS -V
+
+cd $PBS_O_WORKDIR
+python find_1kg_overlap.py
