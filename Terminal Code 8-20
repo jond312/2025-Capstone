@@ -1,0 +1,41 @@
+Terminal Code
+
+[martij196@li04e02 ~]$ cd /hpc/users/martij196
+# Navigates to the user directory on the Minerva HPC filesystem.
+
+[martij196@li04e02 ~]$ mkdir loci_genotyping_project
+# Creates a new directory called loci_genotyping_project to store files related to the capstone project.
+
+[martij196@li04e02 ~]$ cd loci_genotyping_project/
+# Enters the newly created loci_genotyping_project directory.
+
+[martij196@li04e02 loci_genotyping_project]$ pip install pandas
+# Installs the pandas Python package locally.
+
+[martij196@li04e02 loci_genotyping_project]$ mkdir sample_metadata_tables
+# Creates a subdirectory to store metadata tables such as sample info and overlap lists.
+
+[martij196@li04e02 loci_genotyping_project]$ cd sample_metadata_tables/
+# Moves into the sample_metadata_tables directory.
+
+[martij196@li04e02 sample_metadata_tables]$ wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20130606_sample_info/20130606_sample_info.txt
+# Downloads the 1000 Genomes sample info table containing population and sample metadata.
+
+[martij196@li04e02 sample_metadata_tables]$ wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC2/HGSVC2_sample_list.txt
+# Downloads the list of samples used in the Human Genome Structural Variation Consortium phase 2 (HGSVC2).
+
+[martij196@li04e02 sample_metadata_tables]$ wget https://github.com/human-pangenomics/HPRC_metadata/blob/main/data/hprc-data-explorer-tables/HPRC_PacBio_HiFi.file.index.csv
+# Downloads the list of samples from the Human Pangenome Reference Consortium (HPRC) metadata from their GitHub.
+
+[martij196@li04e02 sample_metadata_tables]$ nano inspect_overlaps
+# Opens the inspect_overlaps file in the nano editor. This is a PBS job script that will be submitted later.
+
+[martij196@li04e02 sample_metadata_tables]$ nano find_1kg_overlap.py
+# Opens a Python script named find_1kg_overlap.py which processes the sample overlap logic between 1000 Genomes and the other two datasets.
+
+[martij196@li04e02 sample_metadata_tables]$ python --version
+# Checks the current Python version on the system. To confirm compatibility with the script and pandas.
+Python 3.9.18
+
+[martij196@li04e02 sample_metadata_tables]$ qsub inspect_overlaps
+# Submits the inspect_overlaps PBS job script to the HPC scheduler.
