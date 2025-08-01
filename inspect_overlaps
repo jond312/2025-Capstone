@@ -1,11 +1,11 @@
 #!/bin/bash
-#PBS -N inspect_overlaps
-#PBS -l walltime=00:10:00
-#PBS -l mem=4gb
-#PBS -l nodes=1:ppn=1
-#PBS -o overlap.out
-#PBS -e overlap.err
-#PBS -V
+#BSUB -P acc_oscarlr
+#BSUB -J inspect_overlaps
+#BSUB -W 0:10
+#BSUB -M 4000
+#BSUB -n 1
+#BSUB -o overlap.out
+#BSUB -e overlap_vThree.err
 
-cd $PBS_O_WORKDIR
+module load python/3.12.5
 python find_1kg_overlap.py
