@@ -24,7 +24,7 @@ Terminal Code
 [martij196@li04e02 sample_metadata_tables]$ wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC2/HGSVC2_sample_list.txt
 # Downloads the list of samples used in the Human Genome Structural Variation Consortium phase 2 (HGSVC2).
 
-[martij196@li04e02 sample_metadata_tables]$ wget https://github.com/human-pangenomics/HPRC_metadata/blob/main/data/hprc-data-explorer-tables/HPRC_PacBio_HiFi.file.index.csv
+[martij196@li04e02 sample_metadata_tables]$ wget https://github.com/human-pangenomics/HPRC_metadata/blob/main/data/hprc-data-explorer-tables/HPRC_PacBio_HiFi.sample.index.csv
 # Downloads the list of samples from the Human Pangenome Reference Consortium (HPRC) metadata from their GitHub.
 
 [martij196@li04e02 sample_metadata_tables]$ nano inspect_overlaps
